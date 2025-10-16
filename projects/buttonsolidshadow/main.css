@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+  font-size: var(--fontSizeRoot);
+}
+
+body {
+  display: flex;
+  font-family: var(--fontFamily);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  border-radius: 12px;
+  outline-offset: 5px;
+  cursor: pointer;
+}
+
+.button__text {
+  display: flex;
+  padding: 15px 45px;
+  font-size: var(--fontSizeRoot);
+  font-weight: var(--fontWeightBold);
+  border-radius: 12px;
+  transform: translateY(-6px);
+}
+
+.button:active .button__text {
+  transform: translateY(-2px);
+}
+
+.button.button--primary {
+  background-color: var(--primaryLighter);
+}
+
+.button.button--primary .button__text {
+  color: var(--primaryDarker);
+  background-color: var(--primaryLightest);
+}
